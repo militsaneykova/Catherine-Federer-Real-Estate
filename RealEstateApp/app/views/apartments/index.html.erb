@@ -1,7 +1,7 @@
 <h1>index-apartments</h1>
 
 <% @apartments.each do |apartment| %>
-<h2><%= apartment.title %></h2>
+<h2><%= link_to apartment.title, apartment_path(apartment) %></h2>
 <%end%>
 
 <%= link_to 'Add apartment', new_apartment_path%>
