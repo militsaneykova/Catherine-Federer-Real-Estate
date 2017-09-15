@@ -1,0 +1,39 @@
+<div>
+    <%= form_for @apartment do |f| %>
+        <form>
+            <div>
+                <%= f.label :photo%>
+                    <%= f.text_field :photo %>
+            </div>
+            <div>
+                <%= f.label :title%>
+                    <%= f.text_field :title %>
+            </div>
+            <div>
+                <%= f.label :address%>
+                    <%= f.text_field :address%>
+            </div>
+            <div>
+                <%= f.label :bedrooms%>
+                    <%= f.text_field :bedrooms%>
+            </div>
+            <div>
+                <%= f.label :bathrooms%>
+                    <%= f.text_field :bathrooms%>
+            </div>
+            <div>
+                <%= f.label :description%>
+                    <%= f.text_field :description%>
+            </div>
+            <div>
+                <%= f.label :price%>
+                    <%= f.text_field :price%>
+            </div>
+            <div>
+                <%= f.label :landlord_id%>
+                    <%= f.text_field :landlord_id%>
+            </div>
+                <%= f.submit %>
+        </form>
+    <div>
+<% end %>
