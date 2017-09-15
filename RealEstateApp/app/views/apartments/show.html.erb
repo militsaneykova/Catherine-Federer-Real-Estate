@@ -1,0 +1,10 @@
+<div><%= @apartment.title %></div>
+<div><%= @apartment.address %></div>
+<div><%= @apartment.bedrooms %></div>
+<div><%= @apartment.bathrooms %></div>
+<div><%= @apartment.description %></div>
+<div><%= @apartment.price %></div>
+
+<%= link_to 'All apartment', root_path%>
+<%= link_to 'edit apartment', edit_apartment_path(@apartment)%>
+<%= button_to 'X',apartment_path(@apartment),method: :delete%>
