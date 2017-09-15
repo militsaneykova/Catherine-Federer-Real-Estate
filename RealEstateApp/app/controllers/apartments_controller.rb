@@ -5,7 +5,6 @@ class ApartmentsController < ApplicationController
     end
 
     def show
-      
     end
 
     def new 
@@ -20,6 +19,21 @@ class ApartmentsController < ApplicationController
         else
             render 'new'
         end
+    end
+    def edit
+    end
+
+    def update
+        if @apartment.update(apartment_params)
+            redirect_to apartment_path(@apartment)
+        else
+            render 'edit'
+        end
+    end
+
+    def destroy
+        @apartment.destroy
+        redirect_to '/'
     end
 
     private
