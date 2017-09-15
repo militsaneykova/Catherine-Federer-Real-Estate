@@ -28,11 +28,11 @@ Located at 22-11 Steinway Street, in the Ditmars area.
 
 ### Phase 0 
 - Initial setup
-    - Create allfiles and folders, data base.
+    - Create all files and folders,  plan for the data base.
 
 ### Phase 1
-- Set up Express 
-     -Use API to display the location of the apartments of the map. 
+- Set up Ruby
+     - Add authentication and authorization. 
 
 ### Phase 2
 - Set up React
