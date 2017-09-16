@@ -3,5 +3,3 @@
 <% @apartments.each do |apartment| %>
 <h2><%= link_to apartment.title, apartment_path(apartment) %></h2>
 <%end%>
-
-<%= link_to 'Add apartment', new_apartment_path%>
