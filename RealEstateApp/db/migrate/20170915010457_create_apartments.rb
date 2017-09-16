@@ -8,11 +8,11 @@ class CreateApartments < ActiveRecord::Migration[5.1]
       t.integer :bathrooms
       t.text :description
       t.integer :price
-      t.integer :landlord_id
+      t.integer :user_id
 
       t.timestamps
     end
-    add_index :apartments, :landlord_id
+    add_index :apartments, :user_id
   end
 end
 

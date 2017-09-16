@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(version: 20170915124428) do
     t.integer "bathrooms"
     t.text "description"
     t.integer "price"
-    t.integer "landlord_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["landlord_id"], name: "index_apartments_on_landlord_id"
+    t.index ["user_id"], name: "index_apartments_on_user_id"
   end
 
   create_table "installs", force: :cascade do |t|
