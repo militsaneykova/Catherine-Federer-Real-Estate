@@ -5,6 +5,10 @@
 <div><%= @apartment.description %></div>
 <div><%= @apartment.price %></div>
 
-<%= link_to 'All apartment', root_path%>
-<%= link_to 'edit apartment', edit_apartment_path(@apartment)%>
-<%= button_to 'X',apartment_path(@apartment),method: :delete%>
+<% if current_user %>
+    <%= link_to 'edit apartment', edit_apartment_path(@apartment)%>
+    <%= button_to 'X',apartment_path(@apartment),method: :delete%>
+    <%= link_to 'All apartment', root_path%>
+<% else %>
+    <%= link_to 'All apartment', root_path%>
+<% end %>
