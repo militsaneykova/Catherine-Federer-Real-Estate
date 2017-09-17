@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20170915124428) do
     t.string "photo"
     t.string "title"
     t.text "address"
+    t.text "neighborhood"
     t.integer "bedrooms"
     t.integer "bathrooms"
     t.text "description"
