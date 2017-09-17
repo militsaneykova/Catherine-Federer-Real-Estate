@@ -4,6 +4,7 @@ class CreateApartments < ActiveRecord::Migration[5.1]
       t.string :photo
       t.string :title
       t.text :address
+      t.text :neighborhood
       t.integer :bedrooms
       t.integer :bathrooms
       t.text :description
