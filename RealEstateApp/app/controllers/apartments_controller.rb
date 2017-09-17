@@ -1,19 +1,21 @@
 class ApartmentsController < ApplicationController
-    before_action :single_apartment, only: [:show, :edit, :update, :destroy]  
+    before_action :single_apartment, only: [:show, :edit, :update, :destroy] 
+    before_action :authenticate_user!, except: [:index] 
     def index 
-        @apartments = Apartment.all.order('created_at DESC')
+        @apartments = Apartment.all
     end
 
     def show
     end
 
     def new 
-        @apartment = Apartment.new
+        #If i want to use user_id i have to make the routes nested if not use build (stackoverflow)
+       @apartment = current_user.apartments.build
     end
 
     def create
-        @apartment = Apartment.new(apartment_params)
-
+        @apartment = current_user.apartments.build(apartment_params)
+        
         if @apartment.save 
             redirect_to '/'
         else
