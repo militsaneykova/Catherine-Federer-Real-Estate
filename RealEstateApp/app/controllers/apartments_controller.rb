@@ -1,8 +1,8 @@
 class ApartmentsController < ApplicationController
     before_action :single_apartment, only: [:show, :edit, :update, :destroy] 
     before_action :authenticate_user!, except: [:index] 
-    def index 
-        @apartments = Apartment.all
+    def index     
+            @apartments = Apartment.all
     end
 
     def show
@@ -36,6 +36,11 @@ class ApartmentsController < ApplicationController
     def destroy
         @apartment.destroy
         redirect_to '/'
+    end
+    def search_results
+        keywords = "%" + params[:search] + "%"
+        @apartments = Apartment.all
+        @found_apartments = Apartment.where("title LIKE ?", keywords)
     end
 
     private
