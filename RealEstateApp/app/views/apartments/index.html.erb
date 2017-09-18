@@ -1,5 +1,17 @@
-<h1>index-apartments</h1>
+<h1>Catherine Federer Real Esatate</h1>
+<!-- https://agilewarrior.wordpress.com/2011/09/10/difference-between-form_for-and-form_tag-helper-tags-in-rails/ -->
+<!-- I use a little help for seting up the search  -->
+<%= form_tag  search_results_path, method: 'get' do   %>
+    
+    <div>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search" %>
+    </div>
+
+<% end %>
+
 
 <% @apartments.each do |apartment| %>
-<h2><%= link_to apartment.title, apartment_path(apartment) %></h2>
+    <h2><%= link_to apartment.title, apartment_path(apartment) %></h2>
 <%end%>
+

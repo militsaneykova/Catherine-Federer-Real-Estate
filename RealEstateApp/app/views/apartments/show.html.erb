@@ -6,10 +6,10 @@
 <div><%= @apartment.description %></div>
 <div><%= @apartment.price %></div>
 
-<% if current_user %>
-    <%= link_to 'edit apartment', edit_apartment_path(@apartment)%>
+<% if current_user.id == @apartment.user.id  %>
+    <%= link_to 'Edit apartment', edit_apartment_path(@apartment)%>
     <%= button_to 'Delete',apartment_path(@apartment),method: :delete%>
-    <%= link_to 'All apartment', root_path%>
+    <%= link_to 'All apartments', '/' %>
 <% else %>
-    <%= link_to 'All apartment', root_path%>
+    <%= link_to 'All apartments', '/' %>
 <% end %>

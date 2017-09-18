@@ -1,0 +1,19 @@
+<p>Search Results for '<%= params[:search]%>'</p>
+
+<!-- <%= render partial: 'apartments/apartment'
+collection: @found_apartmentss%> -->
+
+<!-- <% @apartments.each do |apartment| %>
+    
+    <h2><%= link_to apartment.title, apartment_path(apartment, @found_apartments) %></h2>
+
+<%end%> -->
+<% if apartment.title == params[:search] %>
+    <% @apartments.each do |apartment| %>
+    
+    <h2><%= link_to apartment.title, apartment_path(apartment, @found_apartments) %></h2> 
+<%end%>
+<% else %>
+    <p> No results found </p>
+   
+<%end%>
