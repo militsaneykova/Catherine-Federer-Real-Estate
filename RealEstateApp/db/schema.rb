@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170915124428) do
+ActiveRecord::Schema.define(version: 20170918212347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "apartments", force: :cascade do |t|
-    t.string "photo"
     t.string "title"
     t.text "address"
     t.text "neighborhood"
@@ -27,6 +26,10 @@ ActiveRecord::Schema.define(version: 20170915124428) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "apartment_img_file_name"
+    t.string "apartment_img_content_type"
+    t.integer "apartment_img_file_size"
+    t.datetime "apartment_img_updated_at"
     t.index ["user_id"], name: "index_apartments_on_user_id"
   end
 
