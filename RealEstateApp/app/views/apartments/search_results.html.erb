@@ -1,14 +1,9 @@
 <p>Search Results for '<%= params[:search]%>'</p>
 
-<% @apartments.each do |apartment| %>
 
-<% if apartment.title == @found_apartments %>
-     <%=  @found_apartments.each do |found_apartment| %> 
-     <%= found_apartment.title %>
+    <% @found_apartments.each do |found_apartment| %> 
+            <div><%= link_to found_apartment.title, apartment_path(found_apartment) %></div>        
     <% end %>
-<% else %>
-    <p> No results found </p>
-    <h2><%= link_to apartment.title, apartment_path(apartment, @found_apartments) %></h2>    
- <%end%>
-<%end %>
+   
+
 

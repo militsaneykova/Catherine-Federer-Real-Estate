@@ -39,8 +39,7 @@ class ApartmentsController < ApplicationController
     end
     def search_results
         keywords = "%" + params[:search] + "%"
-        @apartments = Apartment.all
-        @found_apartments = Apartment.where("title LIKE ?", keywords)
+        @found_apartments = Apartment.where("title ILIKE ?", keywords)
     end
 
     private
