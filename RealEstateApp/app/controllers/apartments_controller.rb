@@ -38,8 +38,8 @@ class ApartmentsController < ApplicationController
         redirect_to '/'
     end
     def search_results
-        keywords = "%" + params[:search] + "%"
-        @found_apartments = Apartment.where("title ILIKE ?", keywords)
+        user_input = "%" + params[:search] + "%"
+        @found_apartments = Apartment.where("title ILIKE ?", user_input)
     end
 
     private

@@ -1,9 +1,13 @@
 <p>Search Results for '<%= params[:search]%>'</p>
 
+    <% if @found_apartments.empty? %>
+        <p>No results found</p>
+    <% end %>
+
 
     <% @found_apartments.each do |found_apartment| %> 
             <div><%= link_to found_apartment.title, apartment_path(found_apartment) %></div>        
     <% end %>
-   
+
 
 
