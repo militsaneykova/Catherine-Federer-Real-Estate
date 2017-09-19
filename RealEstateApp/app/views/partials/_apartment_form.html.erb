@@ -2,8 +2,20 @@
     <%= form_for @apartment do |f| %>
         <form>
             <div>
-                <%= f.label :photo%>
-                    <%= f.text_field :photo %>
+                 <%= f.label :image %>
+                    <%=f.file_field :apartment_img%>                 
+            </div>
+            <div>
+                 <%= f.label :image %>
+                    <%=f.file_field :apartment_img1%>                 
+            </div>
+            <div>
+                <%= f.label :image %>
+                    <%=f.file_field :apartment_img2%>                 
+            </div>
+            <div>
+                <%= f.label :image %>
+                    <%=f.file_field :apartment_img3%>                 
             </div>
             <div>
                 <%= f.label :title%>
@@ -16,7 +28,7 @@
             <div>
                     <%= f.label :neighborhood%>
                         <%= f.text_field :neighborhood%>
-                </div>
+             </div>
             <div>
                 <%= f.label :bedrooms%>
                     <%= f.text_field :bedrooms%>
