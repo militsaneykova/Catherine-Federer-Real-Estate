@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
+      <%= render "layouts/nav" %>
+    <div class="container">
     <title>RealEstateApp</title>
    
     <%= csrf_meta_tags %>
@@ -12,11 +13,12 @@
   </head>
 
   <body>
-      <%= render "layouts/nav" %>
+     
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
       <%= render "layouts/footer"%>
       
     <%= yield %>
   </body>
+</div >
 </html>
