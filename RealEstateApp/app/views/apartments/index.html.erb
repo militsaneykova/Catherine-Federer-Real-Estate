@@ -14,9 +14,7 @@
 <% @apartments.each do |apartment| %>
    <a href="/apartments/<%= apartment.id %>" >
     <%= image_tag apartment.apartment_img.url(:apartment_index),class: 'ap_pic' %>
-    <%= image_tag apartment.apartment_img1.url(:apartment_index),class: 'ap_pic' %>
-    <%= image_tag apartment.apartment_img2.url(:apartment_index),class: 'ap_pic' %>
-    <%= image_tag apartment.apartment_img3.url(:apartment_index),class: 'ap_pic' %>
+    
     
     <h2><%= apartment.title %></h2>  
 <%end%>
