@@ -1,15 +1,21 @@
-<div><%= @apartment.title %></div>
-<div><%= @apartment.address %></div>
-<div><%= @apartment.neighborhood %></div>
-<div><%= @apartment.bedrooms %></div>
-<div><%= @apartment.bathrooms %></div>
-<div><%= @apartment.description %></div>
-<div><%= @apartment.price %></div>
+<div class="col-md-14">
+    <%= image_tag @apartment.apartment_img.url(:apartment_index),class: 'ap_pic' %>
+    
+</div>
+<div class="">    
+    <h2><%=  @apartment.title %></h2>
+    <div><%= @apartment.address %></div>
+    <div><%= @apartment.neighborhood %></div>
+    <div><%= @apartment.bedrooms %></div>
+    <div><%= @apartment.bathrooms %></div>
+    <div><%= @apartment.description %></div>
+    <div><%= @apartment.price %></div>
+</div>
 
 <% if current_user.id == @apartment.user.id  %>
     <%= link_to 'Edit apartment', edit_apartment_path(@apartment)%>
-    <%= button_to 'Delete',apartment_path(@apartment),method: :delete%>
     <%= link_to 'All apartments', '/' %>
+    <%= button_to 'Delete',apartment_path(@apartment),method: :delete%>
 <% else %>
     <%= link_to 'All apartments', '/' %>
 <% end %>
