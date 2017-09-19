@@ -30,18 +30,6 @@ ActiveRecord::Schema.define(version: 20170918212347) do
     t.string "apartment_img_content_type"
     t.integer "apartment_img_file_size"
     t.datetime "apartment_img_updated_at"
-    t.string "attachment_img1_file_name"
-    t.string "attachment_img1_content_type"
-    t.integer "attachment_img1_file_size"
-    t.datetime "attachment_img1_updated_at"
-    t.string "attachment_img2_file_name"
-    t.string "attachment_img2_content_type"
-    t.integer "attachment_img2_file_size"
-    t.datetime "attachment_img2_updated_at"
-    t.string "attachment_img3_file_name"
-    t.string "attachment_img3_content_type"
-    t.integer "attachment_img3_file_size"
-    t.datetime "attachment_img3_updated_at"
     t.index ["user_id"], name: "index_apartments_on_user_id"
   end
 

@@ -2,9 +2,11 @@
     <%= form_for @apartment do |f| %>
         <form>
             <div>
-                 <%= f.label :image %>
+                <%= f.label :image %>
                     <%=f.file_field :apartment_img%>                 
             </div>
+            <div>
+                <%= f.label :title%>
                     <%= f.text_field :title %>
             </div>
             <div>
