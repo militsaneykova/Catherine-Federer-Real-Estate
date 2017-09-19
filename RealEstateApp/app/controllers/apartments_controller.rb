@@ -2,7 +2,7 @@ class ApartmentsController < ApplicationController
     before_action :single_apartment, only: [:show, :edit, :update, :destroy] 
     before_action :authenticate_user!, except: [:index] 
     def index     
-            @apartments = Apartment.all
+        @apartments = Apartment.all
     end
 
     def show
@@ -45,7 +45,7 @@ class ApartmentsController < ApplicationController
     private
 
     def apartment_params
-        params.require(:apartment).permit(:photo, :title, :address, :bedrooms, :bathrooms, :description, :price, :user_id)
+        params.require(:apartment).permit(:photo, :title, :address, :bedrooms, :bathrooms, :description, :price, :user_id, :apartment_img)
     end
 
     def single_apartment
