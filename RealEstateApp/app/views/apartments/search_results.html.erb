@@ -5,9 +5,16 @@
     <% end %>
 
 
-    <% @found_apartments.each do |found_apartment| %> 
+    
+
+
+<div class="row">
+ <% @found_apartments.each do |found_apartment| %>
+    <div class="col-md-3">
+        <a href="/apartments/<%= found_apartment.id %>">
+            <div><%= image_tag found_apartment.apartment_img.url(:apartment_show) %></div>
             <div><%= link_to found_apartment.title, apartment_path(found_apartment) %></div>        
-    <% end %>
-
-
-
+            <div><%= link_to found_apartment.price, apartment_path(found_apartment) %></div>        
+    </div>
+</div>
+<%end%>
