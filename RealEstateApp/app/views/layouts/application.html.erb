@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <%= render "layouts/nav" %>
+     
     <div class="container">
     <title>RealEstateApp</title>
    
@@ -13,12 +13,12 @@
   </head>
 
   <body>
-     
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-      <%= render "layouts/footer"%>
-      
+      <%= render "layouts/nav" %>
+       
     <%= yield %>
+    <%= render "layouts/footer"%>
+    
   </body>
 </div >
 </html>
+
