@@ -2,14 +2,14 @@
     <%= image_tag @apartment.apartment_img.url(:apartment_index),class: 'ap_pic' %>
    
 </div>
-<div class="">    
+<div class="col-md-14">    
     <h2><%=  @apartment.title %></h2>
-    <div><%= @apartment.address %></div>
-    <div><%= @apartment.neighborhood %></div>
-    <div><%= @apartment.bedrooms %></div>
-    <div><%= @apartment.bathrooms %></div>
-    <div><%= @apartment.description %></div>
-    <div><%= @apartment.price %></div>
+    <div>Adress: <%= @apartment.address %></div>
+    <div>Neighbourhood: <%= @apartment.neighborhood %></div>
+    <div>Bedrooms: <%= @apartment.bedrooms %></div>
+    <div>Bathrooms: <%= @apartment.bathrooms %></div>
+    <div>Description: <%= @apartment.description %></div>
+    <div>Price: $<%= @apartment.price %></div>
 </div>
 
 <% if current_user.id == @apartment.user.id  %>
